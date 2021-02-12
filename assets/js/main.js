@@ -12,9 +12,7 @@ const calcBtn = document.getElementById("calc-btn");
 calcBtn.addEventListener("click", (event) => {
     event.preventDefault();
     let calcMethod = document.querySelector('input[name="calc-method"]:checked').value;
-    console.log(calcMethod);
     let mwst = document.querySelector('input[name="mehrwertsteuersatz"]:checked').value;
-    console.log(mwst);
     let nettoValue = nettoElement.value;
 
     if (calcMethod == "with-mwst") {
@@ -24,15 +22,13 @@ calcBtn.addEventListener("click", (event) => {
     }
 });
 
-function nettoToBrutto(netto, mwst) {
-    let nettoResult = netto * mwst;
-    console.log(nettoResult);
-    document.getElementById("result").innerText = `${nettoResult} €`;
+function nettoToBrutto(amount, mwst) {
+    let bruttoResult = amount * mwst;
+    document.getElementById("result").innerText = `${bruttoResult} €`;
 }
 
-function bruttoTo(netto, mwst) {
-    let nettoResult = netto / mwst;
-    console.log(nettoResult);
+function bruttoTo(amount, mwst) {
+    let nettoResult = amount / mwst;
     document.getElementById("result").innerText = Math.floor(nettoResult) + " €";
 }
 
