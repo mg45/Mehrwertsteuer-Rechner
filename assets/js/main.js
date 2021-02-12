@@ -38,8 +38,8 @@ function bruttoTo(netto, mwst) {
 
 function setDisplay(method) {
     if (method == "without-mwst") {
-        document.getElementById("label-netto").innerText = "Bruttobetrag (Preis mit Mehrwertsteuer) in Euro*";
+        document.getElementById("label-netto").innerText = "Bruttobetrag";
     } else {
-        document.getElementById("label-netto").innerText = "Nettobetrag (Preis ohne Mehrwertsteuer) in Euro*";
+        document.getElementById("label-netto").innerText = "Nettobetrag";
     }
 }
